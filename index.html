@@ -205,6 +205,8 @@ nav.solid {
 
 /* ─── SERVICES ───────────────────────────────────── */
 #services {
+  min-height:unset;
+  padding:80px 5%;
   background:var(--bg2);
   border-top:1px solid var(--glass-border);
   border-bottom:1px solid var(--glass-border);
@@ -227,8 +229,8 @@ nav.solid {
 
 .cards-grid {
   display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:14px; width:100%; max-width:min(1100px, 100%);
+  grid-template-columns:repeat(4,1fr);
+  gap:14px; width:100%; max-width:min(1200px, 100%);
 }
 
 .card {
@@ -261,35 +263,6 @@ nav.solid {
 
 .card h3 { font-size:.95rem; font-weight:700; margin-bottom:8px; }
 .card p  { font-size:.82rem; color:var(--muted); line-height:1.65; }
-
-/* ─── PORTFOLIO ──────────────────────────────────── */
-
-.port-grid {
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:12px; width:100%; max-width:min(1100px, 100%);
-  margin-top:36px;
-}
-
-.port-item {
-  border-radius:14px; overflow:hidden;
-  position:relative; cursor:pointer;
-  aspect-ratio:4/3;
-}
-.port-item img {
-  width:100%; height:100%; object-fit:cover;
-  transition:transform .6s cubic-bezier(.25,.46,.45,.94);
-}
-.port-item:hover img { transform:scale(1.08); }
-.port-overlay {
-  position:absolute; inset:0;
-  background:linear-gradient(to top, rgba(13,13,15,.85) 0%, transparent 55%);
-  opacity:0; transition:opacity .35s;
-  display:flex; align-items:flex-end;
-  padding:22px;
-}
-.port-item:hover .port-overlay { opacity:1; }
-.port-label { font-size:.9rem; font-weight:700; color:#fff; }
 
 /* ─── WHY US ─────────────────────────────────────── */
 #why {
@@ -419,9 +392,7 @@ footer {
   #hero   { min-height:100svh; padding:80px 5% 56px; }
 
   .cards-grid { grid-template-columns:repeat(2,1fr); gap:12px; }
-  .port-grid  { grid-template-columns:repeat(2,1fr); gap:10px; }
   .why-grid   { grid-template-columns:repeat(2,1fr); gap:12px; }
-  .port-overlay { opacity:1; }
   .contact-box { padding:40px 32px; }
 }
 
@@ -460,17 +431,12 @@ footer {
   .sec-sub   { font-size:.88rem; margin-bottom:28px; max-width:100%; }
 
   /* Services */
-  .cards-grid { grid-template-columns:1fr; gap:10px; }
-  .card       { padding:22px 18px; border-radius:14px; }
-  .card-icon  { width:40px; height:40px; font-size:1.15rem; margin-bottom:12px; }
-  .card h3    { font-size:.9rem; }
-  .card p     { font-size:.8rem; }
+  .cards-grid { grid-template-columns:repeat(2,1fr); gap:10px; }
+  .card       { padding:18px 14px; border-radius:14px; }
+  .card-icon  { width:36px; height:36px; font-size:1rem; margin-bottom:10px; }
+  .card h3    { font-size:.82rem; }
+  .card p     { font-size:.75rem; }
 
-  /* Portfolio */
-  .port-grid  { grid-template-columns:1fr; gap:10px; margin-top:28px; }
-  .port-item  { aspect-ratio:16/9; border-radius:12px; }
-  .port-overlay { opacity:1; }
-  .port-label { font-size:.85rem; }
 
   /* Why Us */
   .why-grid   { grid-template-columns:1fr; gap:10px; margin-top:28px; }
@@ -570,7 +536,7 @@ footer {
 <section id="hero">
   <div class="hero-badge">
     <span class="badge-dot"></span>
-    Printing · Branding · Software · Wakad, Pune
+    Printing · Branding · Stationery · Wakad, Pune
   </div>
 
   <img src="logo.png" alt="Infiniti" class="hero-logo">
@@ -581,8 +547,7 @@ footer {
   </h1>
 
   <p class="hero-sub fade">
-    Premium printing, branding, stationery, signage, packaging,
-    software and corporate solutions — all under one roof.
+    Premium printing, branding, stationery, signage, packaging and corporate solutions — all under one roof.
   </p>
 
   <div class="hero-btns fade">
@@ -622,73 +587,79 @@ footer {
 <!-- SERVICES -->
 <section id="services">
   <span class="sec-label fade">What We Do</span>
-  <h2 class="sec-title fade">Six Ways We Grow<br><span class="grad">Your Business</span></h2>
-  <p class="sec-sub fade">Everything from print to digital — built around your goals.</p>
+  <h2 class="sec-title fade">Everything Your Business<br><span class="grad">Needs, Under One Roof</span></h2>
+  <p class="sec-sub fade">14 services — from print to branding, packaging to stationery.</p>
 
   <div class="cards-grid fade">
     <div class="card">
       <div class="card-icon">🖨️</div>
       <h3>Offset &amp; Digital Printing</h3>
-      <p>High-volume offset and short-run digital printing with vibrant colors and fast turnaround for every budget.</p>
+      <p>High-volume offset and short-run digital printing with vibrant colors and fast turnaround.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">�</div>
+      <h3>Eco Solvent Stickers</h3>
+      <p>Durable, weatherproof eco solvent stickers for products, branding, and outdoor use.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">💌</div>
+      <h3>Wedding Cards</h3>
+      <p>Elegant custom wedding invitations and cards printed with premium finishes.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">📄</div>
+      <h3>Pamphlets, Leaflets &amp; Brochures</h3>
+      <p>Eye-catching marketing collateral designed and printed for maximum impact.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">💳</div>
+      <h3>Visiting Cards &amp; Bill Books</h3>
+      <p>Professional visiting cards, invoice books, and receipt pads for every business.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">✉️</div>
+      <h3>Letterheads, Envelopes &amp; Stickers</h3>
+      <p>Complete office stationery — branded letterheads, envelopes, and custom stickers.</p>
     </div>
     <div class="card">
       <div class="card-icon">🏢</div>
       <h3>Indoor &amp; Outdoor Branding</h3>
-      <p>Flex banners, shop signage, hoardings, and display systems that make your presence impossible to ignore.</p>
+      <p>Flex banners, hoardings, display systems, and signage that demand attention.</p>
     </div>
     <div class="card">
-      <div class="card-icon">💳</div>
-      <h3>Stationery &amp; Bill Books</h3>
-      <p>Visiting cards, letterheads, envelopes, invoice books, and complete office stationery packages.</p>
+      <div class="card-icon">🎉</div>
+      <h3>Event &amp; Festival Greeting</h3>
+      <p>Custom greeting cards, gift hampers, and event-specific printed materials.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🪧</div>
+      <h3>Signage Boards (Foam/ACP)</h3>
+      <p>High-quality foam and ACP signage boards for shops, offices, and exhibitions.</p>
     </div>
     <div class="card">
       <div class="card-icon">📦</div>
-      <h3>Custom Packaging</h3>
-      <p>Rigid, corrugated, and folding carton packaging designed to protect your product and elevate your brand.</p>
+      <h3>Packaging Boxes</h3>
+      <p>Custom rigid, corrugated, and folding carton boxes designed for your product.</p>
     </div>
     <div class="card">
       <div class="card-icon">🏆</div>
-      <h3>Trophies &amp; Awards</h3>
-      <p>Custom trophies, plaques, medals, and recognition items for corporate events and institutions.</p>
+      <h3>Custom Trophies</h3>
+      <p>Personalized trophies, plaques, and medals for corporate events and institutions.</p>
     </div>
     <div class="card">
-      <div class="card-icon">💻</div>
-      <h3>Software Development</h3>
-      <p>Websites, mobile apps, and business tools — digital solutions built to support and scale your operations.</p>
+      <div class="card-icon">🗂️</div>
+      <h3>Stationery Supply</h3>
+      <p>Complete office stationery supply — pens, files, notepads, and essentials in bulk.</p>
     </div>
-  </div>
-</section>
-
-<!-- PORTFOLIO -->
-<section id="portfolio">
-  <span class="sec-label fade">Our Work</span>
-  <h2 class="sec-title fade">Work That<br><span class="grad">Speaks Itself</span></h2>
-  <p class="sec-sub fade">A glimpse into the projects and brands we've helped build.</p>
-
-  <div class="port-grid fade">
-    <div class="port-item">
-      <img src="https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=800&q=80" alt="Corporate Printing">
-      <div class="port-overlay"><span class="port-label">Corporate Printing</span></div>
+    <div class="card">
+      <div class="card-icon">🧹</div>
+      <h3>Housekeeping Materials</h3>
+      <p>Cleaning and housekeeping supplies for offices, hotels, and institutions.</p>
     </div>
-    <div class="port-item">
-      <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80" alt="Branding Solutions">
-      <div class="port-overlay"><span class="port-label">Branding Solutions</span></div>
-    </div>
-    <div class="port-item">
-      <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=800&q=80" alt="Office Stationery">
-      <div class="port-overlay"><span class="port-label">Office Stationery</span></div>
-    </div>
-    <div class="port-item">
-      <img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?w=800&q=80" alt="Packaging Design">
-      <div class="port-overlay"><span class="port-label">Packaging Design</span></div>
-    </div>
-    <div class="port-item">
-      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&q=80" alt="Signage">
-      <div class="port-overlay"><span class="port-label">Signage &amp; Branding</span></div>
-    </div>
-    <div class="port-item">
-      <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&q=80" alt="Design Work">
-      <div class="port-overlay"><span class="port-label">Design &amp; Print</span></div>
+    <div class="card">
+      <div class="card-icon">🎨</div>
+      <h3>Customized Printing Solutions</h3>
+      <p>Bespoke printing on any medium — apparel, merchandise, mugs, and more.</p>
     </div>
   </div>
 </section>
